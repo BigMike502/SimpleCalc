@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Dynamic;
 
 namespace DummyField
 {
@@ -44,8 +43,6 @@ namespace DummyField
           {
             mathamatics = Convert.ToInt32(operatorSelection);
           }
-
-          //mathamatics = Convert.ToInt32(Console.ReadLine());
 
           double total;
 
@@ -109,7 +106,6 @@ namespace DummyField
             Console.WriteLine($"Please enter in a yes or no.{Environment.NewLine}");
           }
         }
-        
       }
     }
   }
