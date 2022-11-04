@@ -81,6 +81,7 @@ namespace DummyField
           {
             Console.WriteLine();
             continueLoop = true;
+            Console.WriteLine($"Starting a new Calculation!{Environment.NewLine}");
             break;
           }
           else if (lowerResult is "no" or "n")
