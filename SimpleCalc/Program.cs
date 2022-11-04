@@ -79,6 +79,7 @@ namespace DummyField
           lowerResult = continueResult.ToLower();
           if (lowerResult is "yes" or "y")
           {
+            Console.WriteLine();
             continueLoop = true;
             break;
           }
