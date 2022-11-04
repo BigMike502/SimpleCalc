@@ -30,9 +30,22 @@ namespace DummyField
 
         while (mathamatics != 1 || mathamatics != 2 || mathamatics != 3 || mathamatics != 4)
         {
-          Console.WriteLine();
-          Console.WriteLine("Would you like to 1:add 2:subtract 3:multiply 4:divide");
-          mathamatics = Convert.ToInt32(Console.ReadLine());
+          Console.WriteLine($"{Environment.NewLine}Would you like to 1:add 2:subtract 3:multiply 4:divide");
+          string operatorSelection = Console.ReadLine();
+
+          bool isOpNumber = int.TryParse(operatorSelection, out int x);
+
+          if (isOpNumber != true)
+          {
+            Console.WriteLine($"{operatorSelection}: was not a correct value, please enter 1, 2, 3 or 4!");
+            continue;
+          }
+          else
+          {
+            mathamatics = Convert.ToInt32(operatorSelection);
+          }
+
+          //mathamatics = Convert.ToInt32(Console.ReadLine());
 
           double total;
 
@@ -74,7 +87,7 @@ namespace DummyField
 
         while (lowerResult is not "yes" or "y" or "no" or "n")
         {
-          Console.WriteLine($"Whould you like to continue? \"yes or no\"{Environment.NewLine}");
+          Console.WriteLine($"{Environment.NewLine}Whould you like to continue? \"yes or no\"");
           continueResult = Console.ReadLine();
           lowerResult = continueResult.ToLower();
           if (lowerResult is "yes" or "y")
