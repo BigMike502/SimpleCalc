@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace DummyField
+
+namespace SimpleCalc
 {
   class Program
   {
@@ -18,7 +19,10 @@ namespace DummyField
 
       while (continueLoop == true)
       {
-        Console.WriteLine($"Please enter in numerical value!{Environment.NewLine}Your first number please.");
+        Console.WriteLine($"Welcome to SimpleCalc!\r\n");
+        Console.WriteLine($"Please enter in numerical value!\r\nYou will be asked to Enter in TWO numbers!");
+        
+        Console.WriteLine($"\r\n\r\nYour first number please.");
         numberA = Convert.ToInt32(Console.ReadLine());
 
         Console.WriteLine("\r\nYour second number please");
@@ -73,10 +77,8 @@ namespace DummyField
               break;
           }
 
-          if (mathamatics is 1 or 2 or 3 or 4)
-          {
             break;
-          }
+
         }
 
         string continueResult;
@@ -85,16 +87,16 @@ namespace DummyField
         while (lowerResult is not "yes" or "y" or "no" or "n")
         {
           Console.WriteLine($"{Environment.NewLine}Whould you like to continue? \"yes or no\"");
-          continueResult = Console.ReadLine();
-          lowerResult = continueResult.ToLower();
-          if (lowerResult is "yes" or "y")
+          continueResult = Console.ReadLine().ToLower();
+          //continueResult = continueResult.ToLower();
+          if (continueResult is "yes" or "y")
           {
             Console.WriteLine();
             continueLoop = true;
-            Console.WriteLine($"Starting a new Calculation!{Environment.NewLine}");
+            Console.WriteLine($"Starting a new calculation!{Environment.NewLine}");
             break;
           }
-          else if (lowerResult is "no" or "n")
+          else if (continueResult is "no" or "n")
           {
             Console.WriteLine("Thank you for using my calculator! :D");
             continueLoop = false;

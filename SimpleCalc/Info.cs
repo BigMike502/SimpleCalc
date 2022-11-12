@@ -1,4 +1,4 @@
-﻿namespace DummyField
+﻿namespace SimpleCalc
 {
   public class Info
   {
