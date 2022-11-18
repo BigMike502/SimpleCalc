@@ -9,28 +9,26 @@ It will ask you for the the first number, and then the second number and ask how
 
 It will then process the number and print out the solution.  
 
-##The 3 Extra Features that I am using are:
+## The 3 Extra Features that I am using are:
 
-###Master Loop : Line 17
+### Master Loop : Line 17
 I am looping the program is the user would like to keep using the program.
 
-###Implement a regular expression : CheckExpressions.CS (I have them all isolated)
+### Implement a regular expression : CheckExpressions.CS (I have them all isolated)
 I am using regular expressions Only in the CheckExpressions.CS to limit how much I am repeating code in the program.  
 
-####IsInputANumber Method:
+#### IsInputANumber Method:
 I have it Checking for Any size decimal string for the 2 numbers that the user may enter in.
 
-####CheckOperatorInput Method:
+#### CheckOperatorInput Method:
 Is checking that only the numbers 1-4 are used and only 1 digit long.
 
-####CheckYesOrNo Method:
+#### CheckYesOrNo Method:
 Is checking that only the 4 diffrent options for yes and no are able to use continue.
 
-###Create an additional class which inherits one or more properties from its parent
+### Create an additional class which inherits one or more properties from its parent
 I have CheckExpression as the parrent and I have InfoCheck and Equations as its child to pull the Check Expression info.
 
-
-##
 
 
 ## Things to work on:
