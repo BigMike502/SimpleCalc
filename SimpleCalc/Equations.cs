@@ -17,46 +17,39 @@ namespace SimpleCalc
       numberA = Convert.ToDouble(number1);
       numberB = Convert.ToDouble(number2);
 
-      while (operatorSelection != "1" || operatorSelection != "2" || operatorSelection != "3" || operatorSelection != "4")
+      start:
+      Console.WriteLine($"\r\nWould you like to 1:add 2:subtract 3:multiply 4:divide");
+      operatorSelection = Console.ReadLine();
+
+      if (CheckOperatorInput(operatorSelection) != true)
       {
-        Console.WriteLine($"\r\nWould you like to 1:add 2:subtract 3:multiply 4:divide");
-        operatorSelection = Console.ReadLine();
+        Console.WriteLine($"\r\n====================================================");
+        Console.WriteLine($"{operatorSelection}: was not a correct value, please enter 1, 2, 3 or 4!");
+        Console.WriteLine($"====================================================\r\n");
+        goto start;
+      }
 
-        if (CheckOperatorInput(operatorSelection) != true)
-        {
-          Console.WriteLine($"\r\n====================================================");
-          Console.WriteLine($"{operatorSelection}: was not a correct value, please enter 1, 2, 3 or 4!");
-          Console.WriteLine($"====================================================\r\n");
-          continue;
-        }
+      switch (operatorSelection)
+      {
+        case "1":
+          total = numberA + numberB;
+          Console.WriteLine($"{numberA} + {numberB} = {total}");
+          break;
 
-        switch (operatorSelection)
-        {
-          case "1":
-            total = numberA + numberB;
-            Console.WriteLine($"{numberA} + {numberB} = {total}");
-            break;
+        case "2":
+          total = numberA - numberB;
+          Console.WriteLine($"{numberA} - {numberB} = {total}");
+          break;
 
-          case "2":
-            total = numberA - numberB;
-            Console.WriteLine($"{numberA} - {numberB} = {total}");
-            break;
+        case "3":
+          total = numberA * numberB;
+          Console.WriteLine($"{numberA} * {numberB} = {total}");
+          break;
 
-          case "3":
-            total = numberA * numberB;
-            Console.WriteLine($"{numberA} * {numberB} = {total}");
-            break;
-
-          case "4":
-            total = numberA / numberB;
-            Console.WriteLine($"{numberA} / {numberB} = {total}");
-            break;
-
-          default:
-            break;
-
-        }
-        break;
+        case "4":
+          total = numberA / numberB;
+          Console.WriteLine($"{numberA} / {numberB} = {total}");
+          break;
       }
     }
   }
