@@ -20,7 +20,6 @@ namespace SimpleCalc
         Console.WriteLine($"Please enter in valid numerical value!\r\nYou will be asked to enter in TWO numbers!");
 
         Console.WriteLine($"\r\n\r\nYour first number please.");
-        //numberA = Convert.ToInt32(Console.ReadLine());
         stringA = Console.ReadLine();
         if (InfoCheck.CheckString(stringA, 1) != true)
         {
