@@ -47,24 +47,34 @@ namespace SimpleCalc
         while (lowerResult is not "yes" or "y" or "no" or "n")
         {
           Console.WriteLine($"{Environment.NewLine}Whould you like to continue? \"yes or no\"");
+          EndReadline:
           continueResult = Console.ReadLine().ToLower();
-          if (CheckExpressions.CheckYesOrNo(continueResult) == true)
+          if (CheckExpressions.CheckYesOrNo(continueResult) != true)
           {
+            Console.WriteLine($"{continueResult} is not correct, Please enter in a \"yes or no\"");
+            goto EndReadline;
+          }
+
+          while (continueResult is "yes" or "y")
+          { 
             Console.WriteLine();
-            continueLoop = true;
             Console.Clear();
-            Console.WriteLine($"Starting a new calculation!{Environment.NewLine}\r\n");
+            Console.WriteLine($"\r\n====================================================");
+            Console.WriteLine($"Starting a new calculation!{Environment.NewLine}");
+            Console.WriteLine($"====================================================\r\n\r\n");
             break;
           }
-          else
+          while (continueResult is "no" or "n")
           {
+            Console.WriteLine($"\r\n====================================================");
             Console.WriteLine($"Thank you for using my calculator! :D\r\nPress any key to exit!");
+            Console.WriteLine($"====================================================\r\n\r\n");
             continueLoop = false;
             Console.ReadLine();
 
             break;
           }
-
+          break;
         }
       }
     }
