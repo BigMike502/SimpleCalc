@@ -9,10 +9,9 @@ This is just as the name says, it is a Simple Calculator.  It will only at this 
 It will ask you for the the first number, and then the second number and ask how you would like to process the numbers. 1.Add, 2.Subtract, 3.Multiply, 4.devide.
 
 It will then process the number and print out the solution.  
-
-[Final Project outline](https://docs.google.com/document/d/1tY20mxteNcUFE3CjzzszfNaBJskcpmstoqgj5khVA5M/edit?usp=sharing)  
 ```
-## Nuts and Bolts (How works)
+[Final Project outline](https://docs.google.com/document/d/1tY20mxteNcUFE3CjzzszfNaBJskcpmstoqgj5khVA5M/edit?usp=sharing)
+## Nuts and Bolts
 
 The Program will ask you for your First Number and Second Number.  If you fail to enter in a proper value for ether it will tell you that what you typed was invalid and return you back to the start of the number you were on at that point. It will show you both numbers and move onto the next section of the program.
 
