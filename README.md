@@ -37,6 +37,9 @@ Is checking that only the 4 diffrent options for yes and no are able to use cont
 ### Create an additional class which inherits one or more properties from its parent
 I have CheckExpression as the parrent and I have InfoCheck and Equations as its child to pull the Check Expression info.
 
+## I have a Test Project I was using for Testing the CheckExpressions to see that I had everything correct.
+This was every helpful in me checking the diffrent options for the CheckExpressions.CS Methods to see that I had all the bugs worked out for all the options. 
+
 
 
 ## Things to work on:

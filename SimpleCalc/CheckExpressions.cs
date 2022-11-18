@@ -37,7 +37,7 @@ namespace SimpleCalc
 
     public static bool CheckYesOrNo(string YesOrNo) 
     {
-    if (Regex.Match(YesOrNo, @"^(?:yes\b|y\b|No\b|n\b)$").Success)
+    if (Regex.Match(YesOrNo, @"^(?:yes\b|y\b|no\b|n\b)$").Success)
       {
         return true;
       }
