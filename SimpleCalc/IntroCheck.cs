@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace SimpleCalc
 {
-  public class Intro
+  public class IntroCheck : CheckNumbers
   {
     
-    public bool CheckString(string number, int x)
+    public static bool CheckString(string number, int x)
     {
-      if (CheckNumbers.IsInputANumber(number) == true)
+      if (IsInputANumber(number) == true)
       {
         Console.Clear();
         Console.WriteLine((x == 1) ? $"The first number you entered is {number}." : $"The Second number you entered is {number}");

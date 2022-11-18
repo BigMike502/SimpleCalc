@@ -9,16 +9,18 @@ namespace SimpleCalc.Tests
     public void CheckNumberFault()
     {
       //arrange
-      CheckNumbers checkNumber = new CheckNumbers();
-      string myNumber = "2";
+      bool testNumber;
+
 
       //act
 
-      bool output = CheckNumbers.IsInputANumber(myNumber);
+      testNumber = IntroCheck.IsInputANumber("2");
+
 
       //assert
 
-      Assert.True(output);
+      Assert.True(testNumber);
+
 
     }
   }

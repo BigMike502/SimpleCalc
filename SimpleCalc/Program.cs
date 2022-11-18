@@ -7,14 +7,9 @@ namespace SimpleCalc
   {
     public static void Main(string[] args)
     {
-       Intro startQuestions = new Intro();
       string stringA;
       string stringB;
-      int mathamatics = 0;
       bool continueLoop = true;
-
-      //int numberA;
-      //int numberB;
 
       Console.WriteLine($"Welcome to SimpleCalc!\r\n");
 
@@ -26,7 +21,7 @@ namespace SimpleCalc
         Console.WriteLine($"\r\n\r\nYour first number please.");
         //numberA = Convert.ToInt32(Console.ReadLine());
         stringA = Console.ReadLine();
-        if (!startQuestions.CheckString(stringA, 1) == true)
+        if (!IntroCheck.CheckString(stringA, 1) == true)
         {
           Console.Clear();
           Console.WriteLine($"{stringA} is not a number, please enter in a number!");
@@ -36,65 +31,16 @@ namespace SimpleCalc
       SecondNumber:
         Console.WriteLine("\r\nYour second number please");
         stringB = Console.ReadLine();
-        if (!startQuestions.CheckString(stringB, 2) == true)
+        if (!IntroCheck.CheckString(stringB, 2) == true)
         {
           Console.Clear();
           Console.WriteLine($"{stringB} is not a number, please enter in a number!");
           goto SecondNumber;
         }
 
-        Console.WriteLine();
-        Console.WriteLine($"The values you entered in are {stringA} and {stringB}.{Environment.NewLine}");
+        Console.WriteLine($"\r\nThe values you entered in are {stringA} and {stringB}.{Environment.NewLine}");
 
-        //while (mathamatics != 1 || mathamatics != 2 || mathamatics != 3 || mathamatics != 4)
-        //{
-        //  Console.WriteLine($"{Environment.NewLine}Would you like to 1:add 2:subtract 3:multiply 4:divide");
-        //  string operatorSelection = Console.ReadLine();
-
-        //  bool isOpNumber = int.TryParse(operatorSelection, out int operatorInt);
-
-        //  if (isOpNumber != true)
-        //  {
-        //    Console.WriteLine($"{operatorInt}: was not a correct value, please enter 1, 2, 3 or 4!");
-        //    continue;
-        //  }
-        //  else
-        //  {
-        //    mathamatics = operatorInt;
-        //  }
-
-        //  double total;
-
-        //  switch (mathamatics)
-        //  {
-        //    case 1:
-        //      total = numberA + numberB;
-        //      Console.WriteLine($"{numberA} + {numberB} = {total}");
-        //      break;
-
-        //    case 2:
-        //      total = numberA - numberB;
-        //      Console.WriteLine($"{numberA} - {numberB} = {total}");
-        //      break;
-
-        //    case 3:
-        //      total = numberA * numberB;
-        //      Console.WriteLine($"{numberA} * {numberB} = {total}");
-        //      break;
-
-        //    case 4:
-        //      total = numberA / numberB;
-        //      Console.WriteLine($"{numberA} / {numberB} = {total}");
-        //      break;
-
-        //    default:
-        //      Console.WriteLine($"{mathamatics}: was not a correct value, please enter 1, 2, 3 or 4!");
-        //      break;
-        //  }
-
-        //  break;
-
-        //}
+        
 
         //string continueResult;
         //string lowerResult = "a";
