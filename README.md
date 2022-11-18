@@ -2,7 +2,7 @@
 ```
 This Project is now my final project for SD 1 / Code Louisville.  
 
-There is NOTHING special you need to have downloaded or ready on your computer.  If you run it through Visual Studio It should work without any problems.  This Project was built on Visual Studios 2019 with C# under .NET 5 Framework.  You should also beable to build it and should show up under bin/debug/net5.0/SimpleCalc.exe. 
+There is NOTHING special you need to have downloaded or ready on your computer.  If you run it through Visual Studio It should work without any problems.  This Project was built on Visual Studios 2019 with C# under .NET 5 Framework. Everything runs off the main branch. You should also beable to build it and should show up under bin/debug/net5.0/SimpleCalc.exe. 
 
 This is just as the name says, it is a Simple Calculator.  It will only at this moment will do simple arithmatic.  (add, subtract, multiply, devide) It will only take two numbers at the moment.  
 
