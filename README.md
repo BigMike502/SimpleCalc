@@ -7,6 +7,8 @@ This is just as the name says, it is a Simple Calculator.  It will only at this 
 It will ask you for the the first number, and then the second number and ask how you would like to process the numbers. 1.Add, 2.Subtract, 3.Multiply, 4.devide.
 
 It will then process the number and print out the solution.  
+
+[Final Project outline](https://docs.google.com/document/d/1tY20mxteNcUFE3CjzzszfNaBJskcpmstoqgj5khVA5M/edit?usp=sharing)  
 ```
 ## Nuts and Bolts (How works)
 
@@ -40,10 +42,3 @@ I have CheckExpression as the parrent and I have InfoCheck and Equations as its 
 ## I have a Test Project I was using for Testing the CheckExpressions to see that I had everything correct.
 This was every helpful in me checking the diffrent options for the CheckExpressions.CS Methods to see that I had all the bugs worked out for all the options. 
 
-
-
-## Things to work on:
-```
-Work on adding Checks for numbers after they have been entered.
-Work on breaking in Methods and Classes if able to.
-```
