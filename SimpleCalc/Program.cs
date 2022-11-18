@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace SimpleCalc
 {
@@ -60,7 +60,7 @@ namespace SimpleCalc
             Console.WriteLine();
             Console.Clear();
             Console.WriteLine($"\r\n====================================================");
-            Console.WriteLine($"Starting a new calculation!{Environment.NewLine}");
+            Console.WriteLine($"Starting a new calculation!");
             Console.WriteLine($"====================================================\r\n\r\n");
             break;
           }
@@ -69,6 +69,7 @@ namespace SimpleCalc
             Console.WriteLine($"\r\n====================================================");
             Console.WriteLine($"Thank you for using my calculator! :D\r\nPress any key to exit!");
             Console.WriteLine($"====================================================\r\n\r\n");
+
             continueLoop = false;
             Console.ReadLine();
 

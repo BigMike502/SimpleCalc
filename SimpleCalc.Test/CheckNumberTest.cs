@@ -27,6 +27,7 @@ namespace SimpleCalc.Tests
       testYesOrNo4 = InfoCheck.CheckYesOrNo("n");
 
 
+
       //assert
 
       Assert.True(testNumber);
