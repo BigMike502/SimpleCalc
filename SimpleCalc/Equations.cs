@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleCalc
 {
-  class Equations
+  class Equations : Intro
   {
 
 

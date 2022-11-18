@@ -7,13 +7,11 @@ namespace SimpleCalc
   {
     public static void Main(string[] args)
     {
-
-      double numberA;
-      double numberB;
+       Intro startQuestions = new Intro();
+      string stringA;
+      string stringB;
       int mathamatics = 0;
       bool continueLoop = true;
-
-
 
       //int numberA;
       //int numberB;
@@ -22,96 +20,111 @@ namespace SimpleCalc
 
       while (continueLoop == true)
       {
-        Console.WriteLine($"Please enter in numerical value!\r\nYou will be asked to Enter in TWO numbers!");
-        
-        Console.WriteLine($"\r\n\r\nYour first number please.");
-        numberA = Convert.ToInt32(Console.ReadLine());
+      FirstNumber:
+        Console.WriteLine($"Please enter in valid numerical value!\r\nYou will be asked to enter in TWO numbers!");
 
+        Console.WriteLine($"\r\n\r\nYour first number please.");
+        //numberA = Convert.ToInt32(Console.ReadLine());
+        stringA = Console.ReadLine();
+        if (!startQuestions.CheckString(stringA, 1) == true)
+        {
+          Console.Clear();
+          Console.WriteLine($"{stringA} is not a number, please enter in a number!");
+          goto FirstNumber;
+        }
+
+      SecondNumber:
         Console.WriteLine("\r\nYour second number please");
-        numberB = Convert.ToInt32(Console.ReadLine());
+        stringB = Console.ReadLine();
+        if (!startQuestions.CheckString(stringB, 2) == true)
+        {
+          Console.Clear();
+          Console.WriteLine($"{stringB} is not a number, please enter in a number!");
+          goto SecondNumber;
+        }
 
         Console.WriteLine();
-        Console.WriteLine($"The values you entered in are {numberA} and {numberB}.{Environment.NewLine}");
+        Console.WriteLine($"The values you entered in are {stringA} and {stringB}.{Environment.NewLine}");
 
-        while (mathamatics != 1 || mathamatics != 2 || mathamatics != 3 || mathamatics != 4)
-        {
-          Console.WriteLine($"{Environment.NewLine}Would you like to 1:add 2:subtract 3:multiply 4:divide");
-          string operatorSelection = Console.ReadLine();
+        //while (mathamatics != 1 || mathamatics != 2 || mathamatics != 3 || mathamatics != 4)
+        //{
+        //  Console.WriteLine($"{Environment.NewLine}Would you like to 1:add 2:subtract 3:multiply 4:divide");
+        //  string operatorSelection = Console.ReadLine();
 
-          bool isOpNumber = int.TryParse(operatorSelection, out int operatorInt);
+        //  bool isOpNumber = int.TryParse(operatorSelection, out int operatorInt);
 
-          if (isOpNumber != true)
-          {
-            Console.WriteLine($"{operatorInt}: was not a correct value, please enter 1, 2, 3 or 4!");
-            continue;
-          }
-          else
-          {
-            mathamatics = operatorInt;
-          }
+        //  if (isOpNumber != true)
+        //  {
+        //    Console.WriteLine($"{operatorInt}: was not a correct value, please enter 1, 2, 3 or 4!");
+        //    continue;
+        //  }
+        //  else
+        //  {
+        //    mathamatics = operatorInt;
+        //  }
 
-          double total;
+        //  double total;
 
-          switch (mathamatics)
-          {
-            case 1:
-              total = numberA + numberB;
-              Console.WriteLine($"{numberA} + {numberB} = {total}");
-              break;
+        //  switch (mathamatics)
+        //  {
+        //    case 1:
+        //      total = numberA + numberB;
+        //      Console.WriteLine($"{numberA} + {numberB} = {total}");
+        //      break;
 
-            case 2:
-              total = numberA - numberB;
-              Console.WriteLine($"{numberA} - {numberB} = {total}");
-              break;
+        //    case 2:
+        //      total = numberA - numberB;
+        //      Console.WriteLine($"{numberA} - {numberB} = {total}");
+        //      break;
 
-            case 3:
-              total = numberA * numberB;
-              Console.WriteLine($"{numberA} * {numberB} = {total}");
-              break;
+        //    case 3:
+        //      total = numberA * numberB;
+        //      Console.WriteLine($"{numberA} * {numberB} = {total}");
+        //      break;
 
-            case 4:
-              total = numberA / numberB;
-              Console.WriteLine($"{numberA} / {numberB} = {total}");
-              break;
+        //    case 4:
+        //      total = numberA / numberB;
+        //      Console.WriteLine($"{numberA} / {numberB} = {total}");
+        //      break;
 
-            default:
-              Console.WriteLine($"{mathamatics}: was not a correct value, please enter 1, 2, 3 or 4!");
-              break;
-          }
+        //    default:
+        //      Console.WriteLine($"{mathamatics}: was not a correct value, please enter 1, 2, 3 or 4!");
+        //      break;
+        //  }
 
-            break;
+        //  break;
 
-        }
+        //}
 
-        string continueResult;
-        string lowerResult = "a";
+        //string continueResult;
+        //string lowerResult = "a";
 
-        while (lowerResult is not "yes" or "y" or "no" or "n")
-        {
-          Console.WriteLine($"{Environment.NewLine}Whould you like to continue? \"yes or no\"");
-          continueResult = Console.ReadLine().ToLower();
-          //continueResult = continueResult.ToLower();
-          if (continueResult is "yes" or "y")
-          {
-            Console.WriteLine();
-            continueLoop = true;
-            Console.Clear();
-            Console.WriteLine($"Starting a new calculation!{Environment.NewLine}\r\n");
-            break;
-          }
-          else if (continueResult is "no" or "n")
-          {
-            Console.WriteLine($"Thank you for using my calculator! :D\r\nPress any key to exit!");
-            continueLoop = false;
-            Console.ReadLine();
-            
-            break;
-          }
-          else
-          {
-            Console.WriteLine($"Please enter in a yes or no.{Environment.NewLine}");
-          }
-        }
+        //while (lowerResult is not "yes" or "y" or "no" or "n")
+        //{
+        //  Console.WriteLine($"{Environment.NewLine}Whould you like to continue? \"yes or no\"");
+        //  continueResult = Console.ReadLine().ToLower();
+        //  //continueResult = continueResult.ToLower();
+        //  if (continueResult is "yes" or "y")
+        //  {
+        //    Console.WriteLine();
+        //    continueLoop = true;
+        //    Console.Clear();
+        //    Console.WriteLine($"Starting a new calculation!{Environment.NewLine}\r\n");
+        //    break;
+        //  }
+        //  else if (continueResult is "no" or "n")
+        //  {
+        //    Console.WriteLine($"Thank you for using my calculator! :D\r\nPress any key to exit!");
+        //    continueLoop = false;
+        //    Console.ReadLine();
+
+        //    break;
+        //  }
+        //  else
+        //  {
+        //    Console.WriteLine($"Please enter in a yes or no.{Environment.NewLine}");
+        //  }
+        //}
       }
     }
   }
