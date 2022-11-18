@@ -14,7 +14,7 @@ namespace SimpleCalc.Tests
 
       //act
 
-      testNumber = IntroCheck.IsInputANumber("2");
+      testNumber = InfoCheck.IsInputANumber("2");
 
 
       //assert

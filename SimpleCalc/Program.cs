@@ -22,7 +22,7 @@ namespace SimpleCalc
         Console.WriteLine($"\r\n\r\nYour first number please.");
         //numberA = Convert.ToInt32(Console.ReadLine());
         stringA = Console.ReadLine();
-        if (IntroCheck.CheckString(stringA, 1) != true)
+        if (InfoCheck.CheckString(stringA, 1) != true)
         {
           goto FirstNumber;
         }
@@ -30,7 +30,7 @@ namespace SimpleCalc
       SecondNumber:
         Console.WriteLine("\r\nYour second number please");
         stringB = Console.ReadLine();
-        if (IntroCheck.CheckString(stringB, 2) != true)
+        if (InfoCheck.CheckString(stringB, 2) != true)
         {
           goto SecondNumber;
         }

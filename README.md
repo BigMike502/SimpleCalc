@@ -27,7 +27,7 @@ Is checking that only the numbers 1-4 are used and only 1 digit long.
 Is checking that only the 4 diffrent options for yes and no are able to use continue.
 
 ###Create an additional class which inherits one or more properties from its parent
-I have CheckExpression as the parrent and I have IntroCheck and Equations as its child to pull the Check Expression info.
+I have CheckExpression as the parrent and I have InfoCheck and Equations as its child to pull the Check Expression info.
 
 
 ##

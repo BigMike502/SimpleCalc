@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleCalc
 {
-  public class IntroCheck : CheckExpressions
+  public class InfoCheck : CheckExpressions
   {
     
     public static bool CheckString(string number, int x)
