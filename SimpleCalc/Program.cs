@@ -14,12 +14,14 @@ namespace SimpleCalc
       bool continueLoop = true;
 
 
+
       //int numberA;
       //int numberB;
 
+      Console.WriteLine($"Welcome to SimpleCalc!\r\n");
+
       while (continueLoop == true)
       {
-        Console.WriteLine($"Welcome to SimpleCalc!\r\n");
         Console.WriteLine($"Please enter in numerical value!\r\nYou will be asked to Enter in TWO numbers!");
         
         Console.WriteLine($"\r\n\r\nYour first number please.");
@@ -36,16 +38,16 @@ namespace SimpleCalc
           Console.WriteLine($"{Environment.NewLine}Would you like to 1:add 2:subtract 3:multiply 4:divide");
           string operatorSelection = Console.ReadLine();
 
-          bool isOpNumber = int.TryParse(operatorSelection, out int x);
+          bool isOpNumber = int.TryParse(operatorSelection, out int operatorInt);
 
           if (isOpNumber != true)
           {
-            Console.WriteLine($"{operatorSelection}: was not a correct value, please enter 1, 2, 3 or 4!");
+            Console.WriteLine($"{operatorInt}: was not a correct value, please enter 1, 2, 3 or 4!");
             continue;
           }
           else
           {
-            mathamatics = Convert.ToInt32(operatorSelection);
+            mathamatics = operatorInt;
           }
 
           double total;
@@ -93,14 +95,16 @@ namespace SimpleCalc
           {
             Console.WriteLine();
             continueLoop = true;
-            Console.WriteLine($"Starting a new calculation!{Environment.NewLine}");
+            Console.Clear();
+            Console.WriteLine($"Starting a new calculation!{Environment.NewLine}\r\n");
             break;
           }
           else if (continueResult is "no" or "n")
           {
-            Console.WriteLine("Thank you for using my calculator! :D");
+            Console.WriteLine($"Thank you for using my calculator! :D\r\nPress any key to exit!");
             continueLoop = false;
             Console.ReadLine();
+            
             break;
           }
           else

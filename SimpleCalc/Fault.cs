@@ -9,5 +9,6 @@ namespace SimpleCalc
   class Fault
   {
 
+
   }
 }

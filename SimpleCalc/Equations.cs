@@ -9,5 +9,7 @@ namespace SimpleCalc
   class Equations
   {
 
+
+
   }
 }
