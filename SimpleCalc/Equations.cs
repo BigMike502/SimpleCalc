@@ -6,62 +6,58 @@ using System.Threading.Tasks;
 
 namespace SimpleCalc
 {
-  public class Equations : CheckNumbers
+  class Equations : CheckExpressions
   {
-    int mathamatics = 0;
-    public void MathCheck(string numberA, String numberB)
+    string operatorSelection;
+    double numberA;
+    double numberB;
+    double total;
+    public void MathCheck(string number1, String number2)
     {
-      while (mathamatics != 1 || mathamatics != 2 || mathamatics != 3 || mathamatics != 4)
+      numberA = Convert.ToDouble(number1);
+      numberB = Convert.ToDouble(number2);
+
+      while (operatorSelection != "1" || operatorSelection != "2" || operatorSelection != "3" || operatorSelection != "4")
       {
-        Console.WriteLine($"{Environment.NewLine}Would you like to 1:add 2:subtract 3:multiply 4:divide");
-        string operatorSelection = Console.ReadLine();
+        Console.WriteLine($"\r\nWould you like to 1:add 2:subtract 3:multiply 4:divide");
+        operatorSelection = Console.ReadLine();
 
-        bool isOpNumber = int.TryParse(operatorSelection, out int operatorInt);
-
-        if (isOpNumber != true)
+        if (CheckOperatorInput(operatorSelection) != true)
         {
-          Console.WriteLine($"{operatorInt}: was not a correct value, please enter 1, 2, 3 or 4!");
+          Console.WriteLine($"\r\n====================================================");
+          Console.WriteLine($"{operatorSelection}: was not a correct value, please enter 1, 2, 3 or 4!");
+          Console.WriteLine($"====================================================\r\n");
           continue;
         }
-        else
-        {
-          mathamatics = operatorInt;
-        }
 
-        double total;
-
-        switch (mathamatics)
+        switch (operatorSelection)
         {
-          case 1:
+          case "1":
             total = numberA + numberB;
             Console.WriteLine($"{numberA} + {numberB} = {total}");
             break;
 
-          case 2:
+          case "2":
             total = numberA - numberB;
             Console.WriteLine($"{numberA} - {numberB} = {total}");
             break;
 
-          case 3:
+          case "3":
             total = numberA * numberB;
             Console.WriteLine($"{numberA} * {numberB} = {total}");
             break;
 
-          case 4:
+          case "4":
             total = numberA / numberB;
             Console.WriteLine($"{numberA} / {numberB} = {total}");
             break;
 
           default:
-            Console.WriteLine($"{mathamatics}: was not a correct value, please enter 1, 2, 3 or 4!");
             break;
+
         }
-
         break;
-
       }
     }
-
-
   }
 }

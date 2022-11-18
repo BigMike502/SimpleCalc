@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleCalc
 {
-  public class IntroCheck : CheckNumbers
+  public class IntroCheck : CheckExpressions
   {
     
     public static bool CheckString(string number, int x)
@@ -14,13 +14,17 @@ namespace SimpleCalc
       if (IsInputANumber(number) == true)
       {
         Console.Clear();
+        Console.WriteLine($"\r\n====================================================");
         Console.WriteLine((x == 1) ? $"The first number you entered is {number}." : $"The Second number you entered is {number}");
+        Console.WriteLine($"====================================================\r\n");
         return true;
       }
       else
       {
         Console.Clear();
+        Console.WriteLine($"\r\n====================================================");
         Console.WriteLine($"{number} is not a number, please enter in a number!");
+        Console.WriteLine($"====================================================\r\n");
         return false;
       }
     }

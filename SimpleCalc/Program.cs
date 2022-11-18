@@ -9,6 +9,7 @@ namespace SimpleCalc
     {
       string stringA;
       string stringB;
+      Equations mathEquations = new Equations();
       bool continueLoop = true;
 
       Console.WriteLine($"Welcome to SimpleCalc!\r\n");
@@ -21,56 +22,50 @@ namespace SimpleCalc
         Console.WriteLine($"\r\n\r\nYour first number please.");
         //numberA = Convert.ToInt32(Console.ReadLine());
         stringA = Console.ReadLine();
-        if (!IntroCheck.CheckString(stringA, 1) == true)
+        if (IntroCheck.CheckString(stringA, 1) != true)
         {
-          Console.Clear();
-          Console.WriteLine($"{stringA} is not a number, please enter in a number!");
           goto FirstNumber;
         }
 
       SecondNumber:
         Console.WriteLine("\r\nYour second number please");
         stringB = Console.ReadLine();
-        if (!IntroCheck.CheckString(stringB, 2) == true)
+        if (IntroCheck.CheckString(stringB, 2) != true)
         {
-          Console.Clear();
-          Console.WriteLine($"{stringB} is not a number, please enter in a number!");
           goto SecondNumber;
         }
+        Console.Clear();
+        Console.WriteLine($"\r\n====================================================");
+        Console.WriteLine($"The values you entered in are {stringA} and {stringB}.");
+        Console.WriteLine($"====================================================\r\n\r\n");
 
-        Console.WriteLine($"\r\nThe values you entered in are {stringA} and {stringB}.{Environment.NewLine}");
+        mathEquations.MathCheck(stringA, stringB);
 
-        
+        string continueResult;
+        string lowerResult = "a";
 
-        //string continueResult;
-        //string lowerResult = "a";
+        while (lowerResult is not "yes" or "y" or "no" or "n")
+        {
+          Console.WriteLine($"{Environment.NewLine}Whould you like to continue? \"yes or no\"");
+          continueResult = Console.ReadLine().ToLower();
+          if (CheckExpressions.CheckYesOrNo(continueResult) == true)
+          {
+            Console.WriteLine();
+            continueLoop = true;
+            Console.Clear();
+            Console.WriteLine($"Starting a new calculation!{Environment.NewLine}\r\n");
+            break;
+          }
+          else
+          {
+            Console.WriteLine($"Thank you for using my calculator! :D\r\nPress any key to exit!");
+            continueLoop = false;
+            Console.ReadLine();
 
-        //while (lowerResult is not "yes" or "y" or "no" or "n")
-        //{
-        //  Console.WriteLine($"{Environment.NewLine}Whould you like to continue? \"yes or no\"");
-        //  continueResult = Console.ReadLine().ToLower();
-        //  //continueResult = continueResult.ToLower();
-        //  if (continueResult is "yes" or "y")
-        //  {
-        //    Console.WriteLine();
-        //    continueLoop = true;
-        //    Console.Clear();
-        //    Console.WriteLine($"Starting a new calculation!{Environment.NewLine}\r\n");
-        //    break;
-        //  }
-        //  else if (continueResult is "no" or "n")
-        //  {
-        //    Console.WriteLine($"Thank you for using my calculator! :D\r\nPress any key to exit!");
-        //    continueLoop = false;
-        //    Console.ReadLine();
+            break;
+          }
 
-        //    break;
-        //  }
-        //  else
-        //  {
-        //    Console.WriteLine($"Please enter in a yes or no.{Environment.NewLine}");
-        //  }
-        //}
+        }
       }
     }
   }
