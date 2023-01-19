@@ -19,7 +19,7 @@ namespace SimpleCalc
       FirstNumber:
         Console.WriteLine($"Please enter in valid numerical value!\r\nYou will be asked to enter in TWO numbers!");
 
-        Console.WriteLine($"\r\n\r\nYour first number please.");
+        Console.WriteLine($"\r\n\r\nYour first number please:");
         stringA = Console.ReadLine();
         if (InfoCheck.CheckString(stringA, 1) != true)
         {
@@ -27,7 +27,7 @@ namespace SimpleCalc
         }
 
       SecondNumber:
-        Console.WriteLine("\r\nYour second number please");
+        Console.WriteLine("\r\nYour second number please:");
         stringB = Console.ReadLine();
         if (InfoCheck.CheckString(stringB, 2) != true)
         {
