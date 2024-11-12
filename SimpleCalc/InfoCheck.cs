@@ -11,7 +11,7 @@ namespace SimpleCalc
     
     public static bool CheckString(string number, int x)
     {
-      if (IsInputANumber(number) == true)
+      if (IsANumber(number) == true)
       {
         Console.Clear();
         Console.WriteLine($"\r\n====================================================");

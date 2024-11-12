@@ -21,7 +21,7 @@ namespace SimpleCalc
       Console.WriteLine($"\r\nWould you like to 1:add 2:subtract 3:multiply 4:divide");
       operatorSelection = Console.ReadLine();
 
-      if (CheckOperatorInput(operatorSelection) != true)
+      if (IsValidOperator(operatorSelection) != true)
       {
         Console.WriteLine($"\r\n====================================================");
         Console.WriteLine($"{operatorSelection}: was not a correct value, please enter 1, 2, 3 or 4!");

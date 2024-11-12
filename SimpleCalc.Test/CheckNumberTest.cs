@@ -19,12 +19,12 @@ namespace SimpleCalc.Tests
 
       //act
 
-      testNumber = InfoCheck.IsInputANumber("2");
-      testOporator = InfoCheck.CheckOperatorInput("1");
-      testYesOrNo1 = InfoCheck.CheckYesOrNo("yes");
-      testYesOrNo2 = InfoCheck.CheckYesOrNo("no");
-      testYesOrNo3 = InfoCheck.CheckYesOrNo("y");
-      testYesOrNo4 = InfoCheck.CheckYesOrNo("n");
+      testNumber = InfoCheck.IsANumber("2");
+      testOporator = InfoCheck.IsValidOperator("1");
+      testYesOrNo1 = InfoCheck.IsYesNo("yes");
+      testYesOrNo2 = InfoCheck.IsYesNo("no");
+      testYesOrNo3 = InfoCheck.IsYesNo("y");
+      testYesOrNo4 = InfoCheck.IsYesNo("n");
 
 
 

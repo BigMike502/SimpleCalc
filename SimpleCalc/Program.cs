@@ -48,7 +48,7 @@ namespace SimpleCalc
           Console.WriteLine($"{Environment.NewLine}Whould you like to continue? \"yes or no\"");
           EndReadline:
           continueResult = Console.ReadLine().ToLower();
-          if (CheckExpressions.CheckYesOrNo(continueResult) != true)
+          if (CheckExpressions.IsYesNo(continueResult) != true)
           {
             Console.WriteLine($"{continueResult} is not correct, Please enter in a \"yes or no\"");
             goto EndReadline;

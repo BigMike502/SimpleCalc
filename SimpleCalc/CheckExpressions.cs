@@ -10,7 +10,7 @@ namespace SimpleCalc
   public class CheckExpressions
   {
 
-    public static bool IsInputANumber(string number)
+    public static bool IsANumber(string number)
     {
       
       if (Regex.Match(number, @"^[0-9]+$").Success) 
@@ -23,7 +23,7 @@ namespace SimpleCalc
       }
     }
 
-    public static bool CheckOperatorInput(string number)
+    public static bool IsValidOperator(string number)
     {
       if (Regex.Match(number, @"^[1-4]{1}$").Success)
       {
@@ -35,7 +35,7 @@ namespace SimpleCalc
       }
     }
 
-    public static bool CheckYesOrNo(string YesOrNo)
+    public static bool IsYesNo(string YesOrNo)
     {
       if (Regex.Match(YesOrNo, @"^(?:yes\b|y\b|no\b|n\b)$").Success)
       {
